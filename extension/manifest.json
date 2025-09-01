@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Website Change Tracker",
+  "version": "1.0",
+  "description": "Tracks website sections and sends email alerts.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "activeTab",
+    "scripting",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "offscreen": {
+    "reasons": ["DOM_PARSER"],
+    "justification": "Required for parsing HTML strings in the service worker.",
+    "document_path": "offscreen.html"
+  },
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ]
+}

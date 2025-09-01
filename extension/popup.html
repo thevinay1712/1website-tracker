@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Tracker</title>
+    <style>
+        body { width: 380px; font-family: Arial, sans-serif; padding: 10px; }
+        h1 { font-size: 18px; margin-top: 0; color: #333; }
+        button { padding: 8px; font-size: 14px; cursor: pointer; border: none; border-radius: 4px; }
+        .btn-primary { width: 100%; background-color: #4285F4; color: white; margin-bottom: 10px; }
+        .settings { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+        .settings input { flex-grow: 1; padding: 5px; margin-right: 5px; }
+        .site-entry { text-align: left; font-size: 12px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 5px; }
+        .site-entry p { margin: 2px 0; }
+        .site-entry code { background-color: #f0f0f0; padding: 2px 4px; border-radius: 3px; word-break: break-all; }
+        .site-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 5px; }
+        .btn-delete { background-color: #db4437; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Website Change Tracker</h1>
+    <div class="settings">
+        <input type="email" id="emailInput" placeholder="your-email@example.com">
+        <button id="saveEmailBtn">Save</button>
+    </div>
+    <button id="selectElementBtn" class="btn-primary">Add New Site to Track</button>
+    <hr>
+    <div id="trackedList"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
