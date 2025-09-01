@@ -167,7 +167,7 @@ async function handleDetectedChange(site, oldContent, newContent) {
   };
 
   try {
-    await fetch('https://website-tracker-backend.onrender.com/send-alert', {
+    await fetch('https://website-tracker-backend.onrender.com/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -177,3 +177,4 @@ async function handleDetectedChange(site, oldContent, newContent) {
   }
 
 }
+
