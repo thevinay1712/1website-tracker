@@ -167,7 +167,7 @@ async function handleDetectedChange(site, oldContent, newContent) {
   };
 
   try {
-    await fetch('http://localhost:3000/send-alert', {
+    await fetch('https://website-tracker-backend.onrender.com/send-alert', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -175,4 +175,5 @@ async function handleDetectedChange(site, oldContent, newContent) {
   } catch (error) {
     console.error('Failed to send email alert to server:', error);
   }
+
 }
